@@ -15,19 +15,19 @@ public class Arithmetic<N extends Number> {
         }
     }
 
-    public double add(N num1, N num2) {
+    public Number add(N num1, N num2) {
         return num1.doubleValue() + num2.doubleValue();
     }
 
-    public double subtract(N num1, N num2) {
+    public Number subtract(N num1, N num2) {
         return num1.doubleValue() - num2.doubleValue();
     }
 
-    public double multiply(N num1, N num2) {
+    public Number multiply(N num1, N num2) {
         return num1.doubleValue() * num2.doubleValue();
     }
 
-    public double divide(N num1, N num2) {
+    public Number divide(N num1, N num2) {
         if (num2.intValue() == 0) {
             throw new ArithmeticException("Cannot divide by zero");
         } else {
@@ -35,11 +35,11 @@ public class Arithmetic<N extends Number> {
         }
     }
 
-    public double getMin(N num1, N num2) {
+    public Number getMin(N num1, N num2) {
         return Math.min(num1.doubleValue(), num2.doubleValue());
     }
 
-    public double getMax(N num1, N num2) {
+    public Number getMax(N num1, N num2) {
         return Math.max(num1.doubleValue(), num2.doubleValue());
     }
 }
