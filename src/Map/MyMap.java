@@ -50,6 +50,7 @@ public class MyMap<K, V> {
     public void print() {
         if(keysArray.size() == 0) {
             System.out.print("Map is empty.");
+            return;
         }
         for(int i = 0; i < keysArray.size(); i++){
             System.out.print("{" + keysArray.get(i) + ", ");
