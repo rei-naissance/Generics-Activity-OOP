@@ -32,7 +32,7 @@ public class MyMap<K, V> {
         return ret;
     }
 
-    public V remove(K key, V value) {
+    public V remove(K key) {
         V ret;
         if(keysArray.contains(key)) {
             int index = keysArray.indexOf(key);
@@ -48,6 +48,9 @@ public class MyMap<K, V> {
     // Checking function
 
     public void print() {
+        if(keysArray.size() == 0) {
+            System.out.print("Map is empty.");
+        }
         for(int i = 0; i < keysArray.size(); i++){
             System.out.print("{" + keysArray.get(i) + ", ");
             System.out.print(valuesArray.get(i) + "}\n");
